@@ -13,19 +13,21 @@ This project directly implements, benchmarks, and analyzes the mathematical mode
 
 ### 1. Classical Baseline (Markowitz, 1952)
 The classical formulation assumes deterministic input parameters for expected returns (μ‌) and the covariance matrix (Σ‌):
-
+$$
 \[\min_{x \in \mathcal{X}} \quad x^T \hat{\Sigma} x\]
+$$
+$$
 \[\text{subject to} \quad \hat{\mu}^T x \ge R_{\text{target}}\]
-
+$$
 ### 2. Robust Portfolio Selection (Goldfarb & Iyengar, 2003)
 To protect against data noise, true parameters are assumed to reside within an ellipsoidal uncertainty set \(\mathcal{U}_{\mu}\):
-
+$$
 \[\mathcal{U}_{\mu} = \left\{ \mu \ \Big\vert{}\ (\mu - \hat{\mu})^T \Theta^{-1} (\mu - \hat{\mu}) \le \gamma^2 \right\}\]
-
+$$
 The robust model minimizes the worst-case risk across the defined uncertainty boundaries:
-
+$$
 \[\min_{x \in \mathcal{X}} \max_{\Sigma \in \mathcal{U}_{\Sigma}} x^T \Sigma x\]
-
+$$
 ## Project Timeline & Implementation Blueprint
 - [x] Phase 1: Theoretical literature scoping and mathematical mapping (Active).
 - [ ] Phase 2: Analytical derivation of Lagrange dual problems for conic tractability.
