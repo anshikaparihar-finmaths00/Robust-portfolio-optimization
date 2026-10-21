@@ -24,7 +24,7 @@ $$
 To protect against data noise, true parameters are assumed to reside within an ellipsoidal uncertainty set $\mathcal{U}_{\mu}$:
 
 $$
-\mathcal{U}_{\mu} = \{ \mu \mid (\mu - \hat{\mu})^T \Theta^{-1} (\mu - \hat{\mu}) \le \gamma^2 \right\}
+\mathcal{U}_{\mu} = \{ \mu \ \Big\vert{}\ (\mu - \hat{\mu})^T \Theta^{-1} (\mu - \hat{\mu}) \le \gamma^2 \ }
 $$
 
 The robust model minimizes the worst-case risk across the defined uncertainty boundaries:
